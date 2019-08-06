@@ -2,6 +2,7 @@ import RPi.GPIO as GPIO
 import time
 import logging
 import datetime
+logging.basicConfig(level=logging.INFO)
 
 SENSOR_PIN = 23
 
