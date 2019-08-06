@@ -1,5 +1,7 @@
 import RPi.GPIO as GPIO
 import time
+import logging
+import datetime
 
 SENSOR_PIN = 23
 
@@ -10,6 +12,7 @@ GPIO.setup(SENSOR_PIN, GPIO.IN)
 def my_callback(channel):
     # Here, alternatively, an application / command etc. can be started.
     print('There was a movement!')
+    logging.info(datetime.datetime.now().time())
 
 
 try:
